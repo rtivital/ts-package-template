@@ -3,6 +3,21 @@
   "description": "A template for TypeScript packages",
   "packageManager": "yarn@4.0.0",
   "version": "0.0.0",
+  "main": "./dist/cjs/index.js",
+  "types": "./dist/types/index.d.ts",
+  "module": "./dist/esm/index.mjs",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/types/index.d.mts",
+        "default": "./dist/esm/index.mjs"
+      },
+      "require": {
+        "types": "./dist/types/index.d.ts",
+        "default": "./dist/cjs/index.js"
+      }
+    }
+  },
   "scripts": {
     "clean": "rimraf dist",
     "generate-dts": "esno scripts/generate-dts",
