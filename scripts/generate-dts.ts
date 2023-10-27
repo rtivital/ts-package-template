@@ -1,15 +1,13 @@
-import path from "path";
+import path from "node:path";
 import fs from "fs-extra";
 import { execa } from "execa";
 
-console.log(process.cwd());
-
-export default async function generateDts() {
+async function generateDts() {
   await execa("yarn", ["tsc"]);
-  // await fs.copy(
-  //   path.join(packagePath, "lib/index.d.ts"),
-  //   path.join(packagePath, "lib/index.d.mts")
-  // );
+  await fs.copy(
+    path.join(process.cwd(), "dist/types/index.d.ts"),
+    path.join(process.cwd(), "dist/types/index.d.mts")
+  );
 }
 
 generateDts();
