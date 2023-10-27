@@ -3,6 +3,21 @@
   "description": "A template for TypeScript packages",
   "packageManager": "yarn@4.0.0",
   "version": "0.0.0",
+  "type": "module",
+  "author": "Vitaly Rtishchev <rtivital@gmail.com>",
+  "keywords": [
+    "typescript",
+    "template"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rtivital/ts-package-template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rtivital/ts-package-template/issues"
+  },
+  "homepage": "https://github.com/rtivital/ts-package-template#readme",
   "main": "./dist/cjs/index.js",
   "types": "./dist/types/index.d.ts",
   "module": "./dist/esm/index.mjs",
@@ -28,6 +43,8 @@
     "lint": "eslint --ext .ts,.tsx .",
     "test": "npm run prettier:check && npm run typecheck && npm run lint"
   },
+  "dependencies": {},
+  "peerDependencies": {},
   "devDependencies": {
     "@rollup/plugin-commonjs": "^25.0.7",
     "@rollup/plugin-node-resolve": "^15.2.3",
