@@ -1,0 +1,16 @@
+.yarn
+node_modules
+scripts
+src
+.editorconfig
+.eslintignore
+.eslintrc.cjs
+.gitignore
+.gitattributes
+.prettierrc.cjs
+.yarnrc.yml
+rollup.config.mjs
+tsconfig.eslint.json
+tsconfig.json
+yarn.lock
+.DS_Store
