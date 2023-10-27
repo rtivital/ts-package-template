@@ -9,7 +9,6 @@
     "skipLibCheck": true,
     "outDir": "temp",
     "declaration": true,
-    "emitDeclarationOnly": true,
     "declarationMap": false,
     "resolveJsonModule": true,
     "declarationDir": "dist/types",

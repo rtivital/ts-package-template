@@ -6,7 +6,12 @@
   "scripts": {
     "clean": "rimraf dist",
     "generate-dts": "esno scripts/generate-dts",
-    "build": "rollup -c rollup.config.mjs && npm run generate-dts"
+    "build": "rollup -c rollup.config.mjs && npm run generate-dts",
+    "prettier:check": "prettier --check \"**/*.{ts,tsx}\"",
+    "prettier:write": "prettier --write \"**/*.{ts,tsx}\"",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint --ext .ts,.tsx .",
+    "test": "npm run prettier:check && npm run typecheck && npm run lint"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^25.0.7",
@@ -21,6 +26,7 @@
     "esno": "^0.17.0",
     "execa": "^8.0.1",
     "fs-extra": "^11.1.1",
+    "prettier": "^3.0.3",
     "rimraf": "^5.0.5",
     "rollup": "^4.1.4",
     "rollup-plugin-esbuild": "^6.1.0",
