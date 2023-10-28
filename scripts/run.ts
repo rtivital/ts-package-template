@@ -6,7 +6,11 @@ interface RunMessages {
   error: string;
 }
 
-export async function run<T>(script: Promise<T>, messages: RunMessages) {
+export async function run<T>(
+  script: Promise<T>,
+  messages: RunMessages,
+  onError?: () => Promise<void>
+) {
   signale.info(messages.info);
   try {
     const response = await script;
@@ -15,6 +19,11 @@ export async function run<T>(script: Promise<T>, messages: RunMessages) {
   } catch (err) {
     signale.error(messages.error);
     signale.error(err);
+
+    if (onError) {
+      await onError();
+    }
+
     process.exit(1);
   }
 }
