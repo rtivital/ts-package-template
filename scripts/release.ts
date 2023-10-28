@@ -78,7 +78,14 @@ async function release() {
   const revertVersion = await updateVersion(nextVersion);
 
   await run(
-    execa('yarn', ['npm', 'publish', '--access', 'public']),
+    execa('yarn', [
+      'npm',
+      'publish',
+      '--access',
+      'public',
+      '--tag',
+      versionStage ? 'next' : 'latest',
+    ]),
     {
       info: 'Publishing the package to npm',
       success: 'The package has been published to npm',
