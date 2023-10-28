@@ -16,6 +16,12 @@ const versionIncrement: VersionIncrement = argv._[0] || 'patch';
 const versionStage: VersionStage | undefined = argv.stage;
 
 async function publish() {
+  await run(git.pull(), {
+    info: 'Pulling the latest changes from the remote repository',
+    success: 'The latest changes have been pulled from the remote repository',
+    error: 'Failed to pull the latest changes from the remote repository',
+  });
+
   const gitStatus = await git.status();
 
   if (gitStatus.files.length > 0) {
