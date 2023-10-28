@@ -2,7 +2,7 @@
   "name": "@rtivital/ts-package-template",
   "description": "A template for TypeScript packages",
   "packageManager": "yarn@4.0.0",
-  "version": "0.2.0",
+  "version": "0.3.0-alpha.0",
   "type": "module",
   "author": "Vitaly Rtishchev <rtivital@gmail.com>",
   "engines": {
