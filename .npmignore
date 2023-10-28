@@ -4,6 +4,7 @@ scripts
 src
 .editorconfig
 .eslintignore
+.eslintcache
 .eslintrc.cjs
 .gitignore
 .gitattributes
@@ -11,6 +12,8 @@ src
 .yarnrc.yml
 rollup.config.mjs
 tsconfig.eslint.json
+tsconfig.build.json
 tsconfig.json
+jest.config.cjs
 yarn.lock
 .DS_Store

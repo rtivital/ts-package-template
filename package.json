@@ -44,7 +44,8 @@
     "prettier:write": "prettier --write \"**/*.{ts,tsx}\"",
     "typecheck": "tsc --noEmit",
     "lint": "eslint --cache --ext .ts,.tsx .",
-    "test": "npm run prettier:check && npm run typecheck && npm run lint"
+    "test": "npm run prettier:check && npm run typecheck && npm run lint",
+    "release": "esno scripts/release"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^25.0.7",
@@ -52,6 +53,8 @@
     "@rollup/plugin-replace": "^5.0.4",
     "@types/fs-extra": "^11",
     "@types/node": "^20.8.9",
+    "@types/signale": "^1",
+    "@types/yargs": "^17.0.29",
     "@typescript-eslint/eslint-plugin": "^6.9.0",
     "@typescript-eslint/parser": "^6.9.0",
     "esbuild": "^0.19.5",
@@ -64,6 +67,10 @@
     "rollup": "^4.1.4",
     "rollup-plugin-esbuild": "^6.1.0",
     "rollup-plugin-node-externals": "^6.1.2",
-    "typescript": "^5.2.2"
+    "signale": "^1.4.0",
+    "simple-git": "^3.20.0",
+    "typescript": "^5.2.2",
+    "version-next": "^1.0.2",
+    "yargs": "^17.7.2"
   }
 }
