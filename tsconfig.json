@@ -1,5 +1,5 @@
 {
-  "include": ["src"],
+  "include": ["src", "scripts"],
   "compilerOptions": {
     "target": "ES2015",
     "lib": ["DOM", "ESNext"],

@@ -17,7 +17,7 @@ export default {
     nodeResolve({ extensions: ['.ts', '.tsx', '.js', '.jsx'] }),
     esbuild({
       sourceMap: false,
-      tsconfig: path.resolve(process.cwd(), 'tsconfig.json'),
+      tsconfig: path.resolve(process.cwd(), 'tsconfig.build.json'),
     }),
     replace({ preventAssignment: true }),
   ],

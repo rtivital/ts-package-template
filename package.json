@@ -12,9 +12,6 @@
     "typescript",
     "template"
   ],
-  "np": {
-    "yarn": false
-  },
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -40,7 +37,6 @@
     }
   },
   "scripts": {
-    "publish": "np",
     "clean": "rimraf dist",
     "generate-dts": "esno scripts/generate-dts",
     "build": "rollup -c rollup.config.mjs && npm run generate-dts",
@@ -63,7 +59,6 @@
     "esno": "^0.17.0",
     "execa": "^8.0.1",
     "fs-extra": "^11.1.1",
-    "np": "^8.0.4",
     "prettier": "^3.0.3",
     "rimraf": "^5.0.5",
     "rollup": "^4.1.4",
