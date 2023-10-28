@@ -40,7 +40,7 @@
     "prettier:check": "prettier --check \"**/*.{ts,tsx}\"",
     "prettier:write": "prettier --write \"**/*.{ts,tsx}\"",
     "typecheck": "tsc --noEmit",
-    "lint": "eslint --ext .ts,.tsx .",
+    "lint": "eslint --cache --ext .ts,.tsx .",
     "test": "npm run prettier:check && npm run typecheck && npm run lint"
   },
   "dependencies": {},
