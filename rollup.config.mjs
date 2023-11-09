@@ -9,7 +9,7 @@ export default {
   input: path.join(process.cwd(), './src/index.ts'),
   output: [
     { format: 'es', file: './dist/esm/index.mjs' },
-    { format: 'cjs', file: './dist/cjs/index.js' },
+    { format: 'cjs', file: './dist/cjs/index.cjs' },
   ],
   plugins: [
     commonjs(),
