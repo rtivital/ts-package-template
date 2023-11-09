@@ -10,6 +10,7 @@ Included tools:
 - jest
 - prettier
 - ESLint
+- GitHub workflow for tests
 
 ## Usage
 

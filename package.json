@@ -45,7 +45,7 @@
     "typecheck": "tsc --noEmit",
     "lint": "eslint --cache --ext .ts,.tsx .",
     "jest": "jest",
-    "test": "npm run prettier:check && npm run typecheck && npm run lint && npm run jest",
+    "test": "npm run prettier:check && npm run typecheck && npm run lint && npm run jest && npm run build",
     "release": "npm test && esno scripts/release"
   },
   "devDependencies": {
