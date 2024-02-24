@@ -10,6 +10,12 @@ async function generateDts() {
       path.join(process.cwd(), 'dist/types/index.d.ts'),
       path.join(process.cwd(), 'dist/types/index.d.mts')
     );
+    await fs.copy(
+      path.join(process.cwd(), 'dist/types/index.d.ts'),
+      path.join(process.cwd(), 'dist/types/index.d.cts')
+    );
+
+    await fs.remove(path.join(process.cwd(), 'dist/types/index.d.ts'));
   } catch (err) {
     signale.error('Failed to generate d.ts files');
     signale.error(err);

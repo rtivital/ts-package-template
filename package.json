@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/rtivital/ts-package-template#readme",
   "main": "./dist/cjs/index.cjs",
-  "types": "./dist/types/index.d.ts",
+  "types": "./dist/types/index.d.cts",
   "module": "./dist/esm/index.mjs",
   "exports": {
     ".": {
@@ -31,7 +31,7 @@
         "default": "./dist/esm/index.mjs"
       },
       "require": {
-        "types": "./dist/types/index.d.ts",
+        "types": "./dist/types/index.d.cts",
         "default": "./dist/cjs/index.cjs"
       }
     }
