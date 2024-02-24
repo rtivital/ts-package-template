@@ -27,11 +27,13 @@ body:
     id: link
     attributes:
       label: Reproduction link
+      placeholder: https://github.com/username/repository
       description: If possible, please provide a link to a repository or a codesandbox with a minimal reproduction of the bug.
   - type: textarea
     id: possibleFix
     attributes:
       label: Possible fix
+      placeholder: I suggest fixing this bug by...
       description: If you have a suggestion on how to fix the bug, please describe it here
   - type: checkboxes
     id: self-service
