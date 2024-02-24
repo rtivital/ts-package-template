@@ -8,7 +8,7 @@ src
 .eslintrc.cjs
 .gitignore
 .gitattributes
-.prettierrc.cjs
+.prettierrc.mjs
 .yarnrc.yml
 rollup.config.mjs
 tsconfig.eslint.json
@@ -16,4 +16,6 @@ tsconfig.build.json
 tsconfig.json
 jest.config.cjs
 yarn.lock
+.github/*
+.nvmrc
 .DS_Store

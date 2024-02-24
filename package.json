@@ -40,12 +40,13 @@
     "clean": "rimraf dist",
     "generate-dts": "esno scripts/generate-dts",
     "build": "rollup -c rollup.config.mjs && npm run generate-dts",
+    "pack:test": "esno scripts/pack-test",
     "prettier:check": "prettier --check \"**/*.{ts,tsx}\"",
     "prettier:write": "prettier --write \"**/*.{ts,tsx}\"",
     "typecheck": "tsc --noEmit",
     "lint": "eslint --cache --ext .ts,.tsx .",
     "jest": "jest",
-    "test": "npm run prettier:check && npm run typecheck && npm run lint && npm run jest && npm run build",
+    "test": "npm run prettier:check && npm run typecheck && npm run lint && npm run jest && npm run build && npm run pack:test",
     "release": "npm test && esno scripts/release"
   },
   "devDependencies": {
