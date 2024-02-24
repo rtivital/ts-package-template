@@ -1,6 +1,6 @@
 import path from 'node:path';
-import fs from 'fs-extra';
 import { execa } from 'execa';
+import fs from 'fs-extra';
 import signale from 'signale';
 
 async function generateDts() {

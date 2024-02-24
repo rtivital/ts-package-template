@@ -1,16 +1,16 @@
 import path from 'node:path';
-import chalk from 'chalk';
-import fs from 'fs-extra';
-import yargs from 'yargs';
-import open from 'open';
-import githubRelease from 'new-github-release-url';
-import SimpleGit from 'simple-git';
-import { hideBin } from 'yargs/helpers';
-import { execa } from 'execa';
-import signale from 'signale';
-import { getNextVersion, VersionStage, VersionIncrement } from 'version-next';
 import { run } from './run';
 import { updateVersion } from './update-version';
+import chalk from 'chalk';
+import { execa } from 'execa';
+import fs from 'fs-extra';
+import githubRelease from 'new-github-release-url';
+import open from 'open';
+import signale from 'signale';
+import SimpleGit from 'simple-git';
+import { getNextVersion, VersionIncrement, VersionStage } from 'version-next';
+import yargs from 'yargs';
+import { hideBin } from 'yargs/helpers';
 
 function getRepositoryInfo(gitUrl: string) {
   const [user, repo] = gitUrl.replace('git+https://github.com/', '').replace('.git', '').split('/');
