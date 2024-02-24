@@ -24,6 +24,7 @@ const git = SimpleGit();
 
 const versionIncrement: VersionIncrement = argv._[0] || 'patch';
 const versionStage: VersionStage | undefined = argv.stage;
+const publish: boolean = argv.publish ?? true;
 
 async function release() {
   await run(git.pull(), {
@@ -77,22 +78,26 @@ async function release() {
 
   const revertVersion = await updateVersion(nextVersion);
 
-  await run(
-    execa('yarn', [
-      'npm',
-      'publish',
-      '--access',
-      'public',
-      '--tag',
-      versionStage ? 'next' : 'latest',
-    ]),
-    {
-      info: 'Publishing the package to npm',
-      success: 'The package has been published to npm',
-      error: 'Failed to publish the package to npm',
-    },
-    revertVersion
-  );
+  if (publish) {
+    await run(
+      execa('yarn', [
+        'npm',
+        'publish',
+        '--access',
+        'public',
+        '--tag',
+        versionStage ? 'next' : 'latest',
+      ]),
+      {
+        info: 'Publishing the package to npm',
+        success: 'The package has been published to npm',
+        error: 'Failed to publish the package to npm',
+      },
+      revertVersion
+    );
+  } else {
+    signale.warn('Package has not been published to npm due to --no-publish flag');
+  }
 
   await git.add([packageJsonPath]);
   await git.commit(`Release ${nextVersion}`);
