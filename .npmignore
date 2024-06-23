@@ -3,9 +3,8 @@ node_modules
 scripts
 src
 .editorconfig
-.eslintignore
 .eslintcache
-.eslintrc.cjs
+eslint.config.js
 .gitignore
 .gitattributes
 .prettierrc.mjs
@@ -19,3 +18,4 @@ yarn.lock
 .github/*
 .nvmrc
 .DS_Store
+CONTRIBUTING.md
