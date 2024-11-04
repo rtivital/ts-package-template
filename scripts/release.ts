@@ -80,14 +80,7 @@ async function release() {
 
   if (publish) {
     await run(
-      execa('yarn', [
-        'npm',
-        'publish',
-        '--access',
-        'public',
-        '--tag',
-        versionStage ? 'next' : 'latest',
-      ]),
+      execa('npm', ['publish', '--access', 'public', '--tag', versionStage ? 'next' : 'latest']),
       {
         info: 'Publishing the package to npm',
         success: 'The package has been published to npm',
