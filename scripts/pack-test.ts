@@ -1,11 +1,11 @@
-import { execa } from 'execa';
 import signale from 'signale';
+import { $ } from 'zx';
 
 const ALLOWED_FILES = ['LICENSE', 'README.md', 'package.json'];
 
 async function packCheck() {
-  const { stdout } = await execa('npm', ['pack', '--dry-run', '--json']);
-  const files: { path: string }[] = JSON.parse(stdout)[0].files;
+  const result = await $`npm pack --dry-run --json`;
+  const files: { path: string }[] = JSON.parse(result.stdout)[0].files;
   const extraFiles = files
     .filter((file) => !file.path.startsWith('dist/') && !ALLOWED_FILES.includes(file.path))
     .map((file) => file.path);
