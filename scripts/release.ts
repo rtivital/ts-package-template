@@ -3,6 +3,8 @@ import { run } from './run';
 import { updateVersion } from './update-version';
 import chalk from 'chalk';
 import fs from 'fs-extra';
+import githubRelease from 'new-github-release-url';
+import open from 'open';
 import signale from 'signale';
 import SimpleGit from 'simple-git';
 import { getNextVersion, VersionIncrement, VersionStage } from 'version-next';
@@ -17,6 +19,23 @@ const git = SimpleGit();
 
 const versionIncrement: VersionIncrement = argv._[0] || 'patch';
 const versionStage: VersionStage | undefined = argv.stage;
+
+function parseRepo(repository: any): { user: string; repo: string } | null {
+  if (!repository) return null;
+  const url: string = typeof repository === 'string' ? repository : repository.url || '';
+
+  if (!url) {
+    return null;
+  }
+
+  const cleaned = url.replace('git+https://github.com/', '').replace(/\.git$/i, '');
+  const parts = cleaned.split('/').filter(Boolean);
+  if (parts.length >= 2) {
+    return { user: parts[0], repo: parts[1] };
+  }
+
+  return null;
+}
 
 async function release() {
   await run(git.pull(), {
@@ -83,6 +102,23 @@ async function release() {
   await git.add([packageJsonPath]);
   await git.commit(`Release ${nextVersion}`);
   await git.push();
+
+  const parsedRepo = parseRepo(packageJson.repository);
+  if (!parsedRepo) {
+    signale.warn(
+      'Could not parse repository from package.json, skipping opening GitHub release page.'
+    );
+    return;
+  }
+
+  open(
+    githubRelease({
+      user: parsedRepo.user,
+      repo: parsedRepo.repo,
+      tag: nextVersion,
+      title: nextVersion,
+    })
+  );
 }
 
 release();
