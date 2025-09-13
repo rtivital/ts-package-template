@@ -19,3 +19,4 @@ yarn.lock
 .nvmrc
 .DS_Store
 CONTRIBUTING.md
+renovate.json
