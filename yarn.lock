@@ -2401,11 +2401,11 @@ __metadata:
   linkType: hard
 
 "@types/signale@npm:^1":
-  version: 1.4.6
-  resolution: "@types/signale@npm:1.4.6"
+  version: 1.4.7
+  resolution: "@types/signale@npm:1.4.7"
   dependencies:
     "@types/node": "npm:*"
-  checksum: 10c0/f80ceb6cd7a001a471cce2c397f626cbc617cbd5131bda047c924a5217cf62c2d75c342de5b3c3698594a1ba93ab0b5f6b81f3be32093ff4275356a24ac420d1
+  checksum: 10c0/deff3ccc072c7cdb5b97242799c45a5f477ee20a1150b0798e8e88ecb0cd266466ef25a535892ce672cb7ea7904024a1d58ab7492e58df5854ad519c4f72e518
   languageName: node
   linkType: hard
 
