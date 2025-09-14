@@ -39,7 +39,7 @@
   "scripts": {
     "clean": "rimraf dist",
     "generate-dts": "tsx scripts/generate-dts",
-    "build": "rollup -c rollup.config.mjs && npm run generate-dts",
+    "build": "rollup -c rollup.config.js && npm run generate-dts",
     "pack:test": "tsx scripts/pack-test",
     "prettier:check": "prettier --check \"**/*.{ts,tsx}\"",
     "prettier:write": "prettier --write \"**/*.{ts,tsx}\"",

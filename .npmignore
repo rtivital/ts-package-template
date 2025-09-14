@@ -7,13 +7,13 @@ src
 eslint.config.js
 .gitignore
 .gitattributes
-.prettierrc.mjs
+.prettierrc.js
 .yarnrc.yml
-rollup.config.mjs
+rollup.config.js
 tsconfig.eslint.json
 tsconfig.build.json
 tsconfig.json
-jest.config.cjs
+jest.config.js
 yarn.lock
 .github/*
 .nvmrc
