@@ -4,8 +4,8 @@
   "packageManager": "yarn@4.11.0",
   "version": "0.8.0",
   "type": "module",
-  "types": "./dist/types/index.d.cts",
-  "exports": "./dist/esm/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": "./dist/index.js",
   "author": "Vitaly Rtishchev <rtivital@gmail.com>",
   "engines": {
     "node": ">=16.6.0"
