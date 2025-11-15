@@ -2,7 +2,7 @@
   "name": "@rtivital/ts-package-template",
   "description": "A template for TypeScript packages",
   "packageManager": "yarn@4.11.0",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "type": "module",
   "types": "./dist/index.d.ts",
   "exports": "./dist/index.js",
