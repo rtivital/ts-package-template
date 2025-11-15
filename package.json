@@ -4,6 +4,8 @@
   "packageManager": "yarn@4.11.0",
   "version": "0.7.0",
   "type": "module",
+  "types": "./dist/types/index.d.cts",
+  "exports": "./dist/esm/index.js",
   "author": "Vitaly Rtishchev <rtivital@gmail.com>",
   "engines": {
     "node": ">=16.6.0"
@@ -21,24 +23,9 @@
     "url": "https://github.com/rtivital/ts-package-template/issues"
   },
   "homepage": "https://github.com/rtivital/ts-package-template#readme",
-  "main": "./dist/cjs/index.cjs",
-  "types": "./dist/types/index.d.cts",
-  "module": "./dist/esm/index.mjs",
-  "exports": {
-    ".": {
-      "import": {
-        "types": "./dist/types/index.d.mts",
-        "default": "./dist/esm/index.mjs"
-      },
-      "require": {
-        "types": "./dist/types/index.d.cts",
-        "default": "./dist/cjs/index.cjs"
-      }
-    }
-  },
   "scripts": {
     "clean": "rimraf dist",
-    "generate-dts": "tsx scripts/generate-dts",
+    "generate-dts": "tsc --project tsconfig.build.json",
     "build": "rollup -c rollup.config.js && npm run generate-dts",
     "pack:test": "tsx scripts/pack-test",
     "prettier:check": "prettier --check \"**/*.{ts,tsx}\"",

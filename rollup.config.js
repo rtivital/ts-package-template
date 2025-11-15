@@ -8,10 +8,7 @@ import nodeExternals from 'rollup-plugin-node-externals';
 
 export default {
   input: path.join(process.cwd(), './src/index.ts'),
-  output: [
-    { format: 'es', file: './dist/esm/index.mjs' },
-    { format: 'cjs', file: './dist/cjs/index.cjs' },
-  ],
+  output: [{ format: 'es', dir: './dist', preserveModules: true }],
   plugins: [
     commonjs(),
     nodeExternals(),
