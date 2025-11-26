@@ -20,3 +20,4 @@ yarn.lock
 .DS_Store
 CONTRIBUTING.md
 renovate.json
+.husky

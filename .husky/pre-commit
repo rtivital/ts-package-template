@@ -1,0 +1,2 @@
+yarn prettier:write
+yarn test
