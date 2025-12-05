@@ -5,7 +5,31 @@ const ALLOWED_FILES = ['LICENSE', 'README.md', 'package.json'];
 
 async function packCheck() {
   const result = await $`npm pack --dry-run --json`;
-  const files: { path: string }[] = JSON.parse(result.stdout)[0].files;
+  const output = result.stdout.trim();
+
+  let jsonData = null;
+
+  try {
+    jsonData = JSON.parse(output);
+  } catch {
+    const lines = output.split('\n');
+    const arrayStartIndex = lines.findIndex((line) => line.trim() === '[');
+    if (arrayStartIndex !== -1) {
+      const jsonString = lines.slice(arrayStartIndex).join('\n');
+      try {
+        jsonData = JSON.parse(jsonString);
+      } catch {
+        // Ignore parse errors
+      }
+    }
+  }
+
+  if (!jsonData || !Array.isArray(jsonData) || jsonData.length === 0) {
+    signale.error('Failed to parse npm pack output');
+    process.exit(1);
+  }
+
+  const files: { path: string }[] = jsonData[0].files;
   const extraFiles = files
     .filter((file) => !file.path.startsWith('dist/') && !ALLOWED_FILES.includes(file.path))
     .map((file) => file.path);
