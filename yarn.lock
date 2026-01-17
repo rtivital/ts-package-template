@@ -2056,6 +2056,8 @@ __metadata:
     "@rollup/plugin-commonjs": "npm:^29.0.0"
     "@rollup/plugin-node-resolve": "npm:^16.0.1"
     "@rollup/plugin-replace": "npm:^6.0.2"
+    "@size-limit/esbuild-why": "npm:^12.0.0"
+    "@size-limit/preset-small-lib": "npm:^12.0.0"
     "@types/fs-extra": "npm:^11"
     "@types/jest": "npm:^30.0.0"
     "@types/node": "npm:^25.0.0"
@@ -2074,8 +2076,10 @@ __metadata:
     rollup: "npm:^4.50.1"
     rollup-plugin-esbuild: "npm:^6.2.1"
     rollup-plugin-node-externals: "npm:^8.1.1"
+    rollup-plugin-visualizer: "npm:^6.0.5"
     signale: "npm:^1.4.0"
     simple-git: "npm:^3.28.0"
+    size-limit: "npm:^12.0.0"
     ts-jest: "npm:^29.4.1"
     tsx: "npm:^4.20.5"
     typescript: "npm:^5.9.2"
@@ -2108,6 +2112,52 @@ __metadata:
   dependencies:
     "@sinonjs/commons": "npm:^3.0.1"
   checksum: 10c0/a707476efd523d2138ef6bba916c83c4a377a8372ef04fad87499458af9f01afc58f4f245c5fd062793d6d70587309330c6f96947b5bd5697961c18004dc3e26
+  languageName: node
+  linkType: hard
+
+"@size-limit/esbuild-why@npm:^12.0.0":
+  version: 12.0.0
+  resolution: "@size-limit/esbuild-why@npm:12.0.0"
+  dependencies:
+    esbuild-visualizer: "npm:^0.7.0"
+    open: "npm:^11.0.0"
+  peerDependencies:
+    size-limit: 12.0.0
+  checksum: 10c0/a3975d766554269af12a3a2d8b1c5c3f21a38191d16f486ecd0c3c53b90abd043af7e6bdadfa3dac1a83a612462fcba21056df7e905a6b2e32653916bba001b6
+  languageName: node
+  linkType: hard
+
+"@size-limit/esbuild@npm:12.0.0":
+  version: 12.0.0
+  resolution: "@size-limit/esbuild@npm:12.0.0"
+  dependencies:
+    esbuild: "npm:^0.27.0"
+    nanoid: "npm:^5.1.6"
+  peerDependencies:
+    size-limit: 12.0.0
+  checksum: 10c0/31130e5754605bd7d8931aa4bf9d43a9730e8eaee21dc5b5e77e255503fd473fd48ce73e595692a9ff712600428a10a0586001b6c3d2f2e808ff24ec00b82c4e
+  languageName: node
+  linkType: hard
+
+"@size-limit/file@npm:12.0.0":
+  version: 12.0.0
+  resolution: "@size-limit/file@npm:12.0.0"
+  peerDependencies:
+    size-limit: 12.0.0
+  checksum: 10c0/bd19f971031778f6ee41acbb6acebf97d4cd8a58f164576f68b7241380e430680ca9ddbe2a2ac0ce92236007a72a51a7ca2a05af079c09fe48c010f517349987
+  languageName: node
+  linkType: hard
+
+"@size-limit/preset-small-lib@npm:^12.0.0":
+  version: 12.0.0
+  resolution: "@size-limit/preset-small-lib@npm:12.0.0"
+  dependencies:
+    "@size-limit/esbuild": "npm:12.0.0"
+    "@size-limit/file": "npm:12.0.0"
+    size-limit: "npm:12.0.0"
+  peerDependencies:
+    size-limit: 12.0.0
+  checksum: 10c0/fa177af19ce90fd7e617af9712d87e4856f47855d1920a827c9d434547280e1c27cc7e5849a70b8ca3c8e7ed42afd9e317454bd27d842ef815148d344f671c02
   languageName: node
   linkType: hard
 
@@ -2936,6 +2986,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"bytes-iec@npm:^3.1.1":
+  version: 3.1.1
+  resolution: "bytes-iec@npm:3.1.1"
+  checksum: 10c0/cb553a214d49afe2efb4f9f6f03c0a76dbf2b0db8fe176c1d9943f74b79fb36767938e5f0a60991d870309c96f21e440904dd4f92b54c9c316c88486e6eef025
+  languageName: node
+  linkType: hard
+
 "cacache@npm:^17.0.0":
   version: 17.1.4
   resolution: "cacache@npm:17.1.4"
@@ -3260,6 +3317,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"define-lazy-prop@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "define-lazy-prop@npm:2.0.0"
+  checksum: 10c0/db6c63864a9d3b7dc9def55d52764968a5af296de87c1b2cc71d8be8142e445208071953649e0386a8cc37cfcf9a2067a47207f1eb9ff250c2a269658fdae422
+  languageName: node
+  linkType: hard
+
 "define-lazy-prop@npm:^3.0.0":
   version: 3.0.0
   resolution: "define-lazy-prop@npm:3.0.0"
@@ -3366,6 +3430,19 @@ __metadata:
   version: 1.7.0
   resolution: "es-module-lexer@npm:1.7.0"
   checksum: 10c0/4c935affcbfeba7fb4533e1da10fa8568043df1e3574b869385980de9e2d475ddc36769891936dbb07036edb3c3786a8b78ccf44964cd130dedc1f2c984b6c7b
+  languageName: node
+  linkType: hard
+
+"esbuild-visualizer@npm:^0.7.0":
+  version: 0.7.0
+  resolution: "esbuild-visualizer@npm:0.7.0"
+  dependencies:
+    open: "npm:^8.4.0"
+    picomatch: "npm:^4.0.0"
+    yargs: "npm:^17.6.2"
+  bin:
+    esbuild-visualizer: dist/bin/cli.js
+  checksum: 10c0/2b7929f4f73e44bc61f269497cf1a046b252be87104b1d8ad640545ad12a2bddc26c6491cfb31c00153d12d2655ce2dec6d922eac77dd0d8ba23ea903e1275ae
   languageName: node
   linkType: hard
 
@@ -4306,6 +4383,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"is-docker@npm:^2.0.0, is-docker@npm:^2.1.1":
+  version: 2.2.1
+  resolution: "is-docker@npm:2.2.1"
+  bin:
+    is-docker: cli.js
+  checksum: 10c0/e828365958d155f90c409cdbe958f64051d99e8aedc2c8c4cd7c89dcf35329daed42f7b99346f7828df013e27deb8f721cf9408ba878c76eb9e8290235fbcdcc
+  languageName: node
+  linkType: hard
+
 "is-docker@npm:^3.0.0":
   version: 3.0.0
   resolution: "is-docker@npm:3.0.0"
@@ -4397,6 +4483,15 @@ __metadata:
   version: 2.0.1
   resolution: "is-stream@npm:2.0.1"
   checksum: 10c0/7c284241313fc6efc329b8d7f08e16c0efeb6baab1b4cd0ba579eb78e5af1aa5da11e68559896a2067cd6c526bd29241dda4eb1225e627d5aa1a89a76d4635a5
+  languageName: node
+  linkType: hard
+
+"is-wsl@npm:^2.2.0":
+  version: 2.2.0
+  resolution: "is-wsl@npm:2.2.0"
+  dependencies:
+    is-docker: "npm:^2.0.0"
+  checksum: 10c0/a6fa2d370d21be487c0165c7a440d567274fbba1a817f2f0bfa41cc5e3af25041d84267baa22df66696956038a43973e72fca117918c91431920bdef490fa25e
   languageName: node
   linkType: hard
 
@@ -5195,6 +5290,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lilconfig@npm:^3.1.3":
+  version: 3.1.3
+  resolution: "lilconfig@npm:3.1.3"
+  checksum: 10c0/f5604e7240c5c275743561442fbc5abf2a84ad94da0f5adc71d25e31fa8483048de3dcedcb7a44112a942fed305fd75841cdf6c9681c7f640c63f1049e9a5dcc
+  languageName: node
+  linkType: hard
+
 "lines-and-columns@npm:^1.1.6":
   version: 1.2.4
   resolution: "lines-and-columns@npm:1.2.4"
@@ -5556,6 +5658,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"nanoid@npm:^5.1.6":
+  version: 5.1.6
+  resolution: "nanoid@npm:5.1.6"
+  bin:
+    nanoid: bin/nanoid.js
+  checksum: 10c0/27b5b055ad8332cf4f0f9f6e2a494aa7e5ded89df4cab8c8490d4eabefe72c4423971d2745d22002868b1d50576a5e42b7b05214733b19f576382323282dd26e
+  languageName: node
+  linkType: hard
+
+"nanospinner@npm:^1.2.2":
+  version: 1.2.2
+  resolution: "nanospinner@npm:1.2.2"
+  dependencies:
+    picocolors: "npm:^1.1.1"
+  checksum: 10c0/07264f63816a8ec24d84ffe216a605cf11dffd8b098d4c5e6790437304b47e10ce4fc341de8dbcfc1b59aa42107f9949c89bcc201239eb61a80e14b6b1a20c90
+  languageName: node
+  linkType: hard
+
 "napi-postinstall@npm:^0.2.2":
   version: 0.2.4
   resolution: "napi-postinstall@npm:0.2.4"
@@ -5705,6 +5825,17 @@ __metadata:
     powershell-utils: "npm:^0.1.0"
     wsl-utils: "npm:^0.3.0"
   checksum: 10c0/7aeeda4131268ed90f90e7728dda5c46bb0c6205b27a4be3e86ea33593e30dd393423e20e31c00802a8e635ef59becaee33ef9749a8ceb027567cd253e9e7b1e
+  languageName: node
+  linkType: hard
+
+"open@npm:^8.0.0, open@npm:^8.4.0":
+  version: 8.4.2
+  resolution: "open@npm:8.4.2"
+  dependencies:
+    define-lazy-prop: "npm:^2.0.0"
+    is-docker: "npm:^2.1.1"
+    is-wsl: "npm:^2.2.0"
+  checksum: 10c0/bb6b3a58401dacdb0aad14360626faf3fb7fba4b77816b373495988b724fb48941cad80c1b65d62bb31a17609b2cd91c41a181602caea597ca80dfbcc27e84c9
   languageName: node
   linkType: hard
 
@@ -6006,7 +6137,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"picomatch@npm:^4.0.1, picomatch@npm:^4.0.3":
+"picomatch@npm:^4.0.0, picomatch@npm:^4.0.1, picomatch@npm:^4.0.3":
   version: 4.0.3
   resolution: "picomatch@npm:4.0.3"
   checksum: 10c0/9582c951e95eebee5434f59e426cddd228a7b97a0161a375aed4be244bd3fe8e3a31b846808ea14ef2c8a2527a6eeab7b3946a67d5979e81694654f939473ae2
@@ -6271,6 +6402,28 @@ __metadata:
   languageName: node
   linkType: hard
 
+"rollup-plugin-visualizer@npm:^6.0.5":
+  version: 6.0.5
+  resolution: "rollup-plugin-visualizer@npm:6.0.5"
+  dependencies:
+    open: "npm:^8.0.0"
+    picomatch: "npm:^4.0.2"
+    source-map: "npm:^0.7.4"
+    yargs: "npm:^17.5.1"
+  peerDependencies:
+    rolldown: 1.x || ^1.0.0-beta
+    rollup: 2.x || 3.x || 4.x
+  peerDependenciesMeta:
+    rolldown:
+      optional: true
+    rollup:
+      optional: true
+  bin:
+    rollup-plugin-visualizer: dist/bin/cli.js
+  checksum: 10c0/3824626e97d5033fbb3aa1bbe93c8c17a8569bc47e33c941bde6b90404f2cae70b26fec1b623bd393c3e076338014196c91726ed2c96218edc67e1f21676f7ef
+  languageName: node
+  linkType: hard
+
 "rollup@npm:^4.50.1":
   version: 4.55.1
   resolution: "rollup@npm:4.55.1"
@@ -6499,6 +6652,26 @@ __metadata:
   languageName: node
   linkType: hard
 
+"size-limit@npm:12.0.0, size-limit@npm:^12.0.0":
+  version: 12.0.0
+  resolution: "size-limit@npm:12.0.0"
+  dependencies:
+    bytes-iec: "npm:^3.1.1"
+    lilconfig: "npm:^3.1.3"
+    nanospinner: "npm:^1.2.2"
+    picocolors: "npm:^1.1.1"
+    tinyglobby: "npm:^0.2.15"
+  peerDependencies:
+    jiti: ^2.0.0
+  peerDependenciesMeta:
+    jiti:
+      optional: true
+  bin:
+    size-limit: bin.js
+  checksum: 10c0/b45169e976f82e5743c08d03bea86e1d4058b2f02da66d776e4b8f79fd1070216aa25d3ab270219ffb1bf7322d48999dae876389f229073e54b660f34d888e01
+  languageName: node
+  linkType: hard
+
 "slash@npm:^3.0.0":
   version: 3.0.0
   resolution: "slash@npm:3.0.0"
@@ -6555,6 +6728,13 @@ __metadata:
   version: 0.6.1
   resolution: "source-map@npm:0.6.1"
   checksum: 10c0/ab55398007c5e5532957cb0beee2368529618ac0ab372d789806f5718123cc4367d57de3904b4e6a4170eb5a0b0f41373066d02ca0735a0c4d75c7d328d3e011
+  languageName: node
+  linkType: hard
+
+"source-map@npm:^0.7.4":
+  version: 0.7.6
+  resolution: "source-map@npm:0.7.6"
+  checksum: 10c0/59f6f05538539b274ba771d2e9e32f6c65451982510564438e048bc1352f019c6efcdc6dd07909b1968144941c14015c2c7d4369fb7c4d7d53ae769716dcc16c
   languageName: node
   linkType: hard
 
@@ -7251,7 +7431,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"yargs@npm:^17.7.2":
+"yargs@npm:^17.5.1, yargs@npm:^17.6.2, yargs@npm:^17.7.2":
   version: 17.7.2
   resolution: "yargs@npm:17.7.2"
   dependencies:

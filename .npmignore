@@ -24,3 +24,5 @@ renovate.json
 knip.config.js
 coverage
 CODE_REVIEW.md
+esbuild-why.html
+stats.html

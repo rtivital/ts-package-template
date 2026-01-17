@@ -137,3 +137,8 @@ dist
 .vscode-test
 
 .DS_Store
+
+# Project files
+.claude
+esbuild-why.html
+stats.html
