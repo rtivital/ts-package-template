@@ -31,6 +31,12 @@ Included tools:
 - Write your code in `src/` directory
 - Run `npm run release` to build and publish your package to npm
 
+## Testing
+
+- Run `npm test` to run all tests (prettier check, typecheck, lint, jest tests, build, package validation with `npm pack`, knip)
+- Run `npm run jest:coverage` to run jest with coverage report
+- Run `npm run jest:watch` to run jest in watch mode
+
 ## Publishing to npm
 
 Use `release` script to publish the package:

@@ -22,3 +22,5 @@ yarn.lock
 CONTRIBUTING.md
 renovate.json
 knip.config.js
+coverage
+CODE_REVIEW.md
