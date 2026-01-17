@@ -41,7 +41,6 @@
     "size": "npm run build && size-limit",
     "analyze": "npm run build && size-limit --why"
   },
-  "dependencies": {},
   "devDependencies": {
     "@eslint/js": "^9.35.0",
     "@ianvs/prettier-plugin-sort-imports": "^4.7.0",
