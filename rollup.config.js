@@ -8,13 +8,13 @@ import nodeExternals from 'rollup-plugin-node-externals';
 
 export default {
   input: path.join(process.cwd(), './src/index.ts'),
-  output: [{ format: 'es', dir: './dist', preserveModules: true }],
+  output: [{ format: 'es', dir: './dist', preserveModules: true, sourcemap: true }],
   plugins: [
     commonjs(),
     nodeExternals(),
     nodeResolve({ extensions: ['.ts', '.tsx', '.js', '.jsx'] }),
     esbuild({
-      sourceMap: false,
+      sourceMap: true,
       tsconfig: path.resolve(process.cwd(), 'tsconfig.build.json'),
     }),
     replace({ preventAssignment: true }),
