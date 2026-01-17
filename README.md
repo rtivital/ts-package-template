@@ -21,6 +21,7 @@ Included tools:
 - prettier
 - ESLint
 - Knip
+- size-limit
 - GitHub workflow for tests
 
 ## Usage
