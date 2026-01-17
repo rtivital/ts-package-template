@@ -33,7 +33,7 @@
     "typecheck": "tsc --noEmit",
     "lint": "eslint --cache .",
     "jest": "jest",
-    "test": "npm run prettier:check && npm run typecheck && npm run lint && npm run jest && npm run build && npm run pack:test",
+    "test": "npm run prettier:check && npm run typecheck && npm run lint && npm run jest && npm run build && npm run pack:test && npm run knip",
     "release": "npm test && tsx scripts/release",
     "knip": "knip"
   },

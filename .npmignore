@@ -1,3 +1,4 @@
+.claude
 .yarn
 node_modules
 scripts
@@ -20,3 +21,4 @@ yarn.lock
 .DS_Store
 CONTRIBUTING.md
 renovate.json
+knip.config.js
