@@ -5,6 +5,7 @@
     "lib": ["DOM", "ESNext"],
     "module": "ESNext",
     "moduleResolution": "Node",
+    "baseUrl": ".",
     "jsx": "react",
     "skipLibCheck": true,
     "outDir": "temp",

@@ -7,19 +7,12 @@ export default {
   // Entry points for the package
   entry: [
     'src/index.ts', // Main package entry
+    'rolldown.config.js', // Build configuration
     'scripts/**/*.ts', // Release and build scripts
   ],
 
   // Project files to analyze
   project: ['src/**/*.ts', 'scripts/**/*.ts'],
-
-  // Ignore patterns
-  ignore: [
-    'dist/**', // Build output
-    'coverage/**', // Test coverage reports
-    '**/*.test.ts', // Test files (often have unused exports for testing)
-    '**/*.test.tsx',
-  ],
 
   // Uncomment below if you need to ignore specific dependencies
   // ignoreDependencies: [],

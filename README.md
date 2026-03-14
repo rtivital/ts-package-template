@@ -5,6 +5,7 @@ A template to publish a TypeScript package to npm.
 Key features:
 
 - Ready to use ESM build system
+- Fast library bundling with Rolldown
 - Properly configured [exports in package.json](https://publint.dev/@rtivital/ts-package-template) to support all modern bundlers and Node.js
 - CI with GitHub Actions
 - Testing and linting setup ready: Jest, ESLint, Prettier, Knip
@@ -15,8 +16,7 @@ Key features:
 Included tools:
 
 - Yarn v4
-- Rollup
-- esbuild
+- Rolldown
 - jest
 - prettier
 - ESLint

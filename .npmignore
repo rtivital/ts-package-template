@@ -10,7 +10,7 @@ eslint.config.js
 .gitattributes
 .prettierrc.js
 .yarnrc.yml
-rollup.config.js
+rolldown.config.js
 tsconfig.eslint.json
 tsconfig.build.json
 tsconfig.json
