@@ -4,10 +4,10 @@
     "target": "ES2015",
     "lib": ["DOM", "ESNext"],
     "module": "ESNext",
-    "moduleResolution": "Node",
-    "baseUrl": ".",
+    "moduleResolution": "Bundler",
     "jsx": "react",
     "skipLibCheck": true,
+    "types": ["node", "jest"],
     "outDir": "temp",
     "declaration": true,
     "declarationMap": false,
@@ -15,9 +15,6 @@
     "declarationDir": "dist",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
-    "strict": true,
-    "paths": {
-      "@/*": ["./src/*"]
-    }
+    "strict": true
   }
 }

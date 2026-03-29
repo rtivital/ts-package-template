@@ -3,6 +3,7 @@
   "include": ["src"],
   "exclude": ["src/**/*.test.ts", "src/**/*.test.tsx"],
   "compilerOptions": {
-    "emitDeclarationOnly": true
+    "emitDeclarationOnly": true,
+    "rootDir": "./src"
   }
 }
