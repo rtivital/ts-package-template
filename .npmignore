@@ -8,7 +8,8 @@ src
 eslint.config.js
 .gitignore
 .gitattributes
-.prettierrc.js
+.oxfmtrc.json
+.vscode
 .yarnrc.yml
 rolldown.config.js
 tsconfig.eslint.json
