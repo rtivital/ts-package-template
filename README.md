@@ -8,7 +8,7 @@ Key features:
 - Fast library bundling with Rolldown
 - Properly configured [exports in package.json](https://publint.dev/@rtivital/ts-package-template) to support all modern bundlers and Node.js
 - CI with GitHub Actions
-- Testing and linting setup ready: Jest, ESLint, Prettier, Knip
+- Testing and linting setup ready: Jest, Oxlint, Oxfmt, Knip
 - Publish to npm with an npm script, including support for pre-releases (alpha, beta, rc)
 - `npm pack` validation as part of the testing pipeline: makes sure only necessary files are included in the package
 - Size limit check with [size-limit](https://github.com/ai/size-limit)
@@ -18,8 +18,8 @@ Included tools:
 - Yarn v4
 - Rolldown
 - jest
-- prettier
-- ESLint
+- oxfmt
+- oxlint
 - Knip
 - size-limit
 - GitHub workflow for tests
@@ -35,7 +35,7 @@ Included tools:
 
 ## Testing
 
-- Run `npm test` to run all tests (prettier check, typecheck, lint, jest tests, build, package validation with `npm pack`, knip)
+- Run `npm test` to run all tests (oxfmt check, typecheck, lint, jest tests, build, package validation with `npm pack`, knip)
 - Run `npm run jest:coverage` to run jest with coverage report
 - Run `npm run jest:watch` to run jest in watch mode
 - Run `npm run size` to validate package size or `npm run analyze` to see size analysis report

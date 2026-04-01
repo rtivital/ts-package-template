@@ -5,14 +5,13 @@ scripts
 src
 .editorconfig
 .eslintcache
-eslint.config.js
 .gitignore
 .gitattributes
 .oxfmtrc.json
+oxlint.config.ts
 .vscode
 .yarnrc.yml
 rolldown.config.js
-tsconfig.eslint.json
 tsconfig.build.json
 tsconfig.json
 jest.config.js
