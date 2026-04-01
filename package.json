@@ -39,11 +39,10 @@
     "release": "npm test && tsx scripts/release",
     "knip": "knip",
     "size": "npm run build && size-limit",
-    "analyze": "npm run build && size-limit --why"
+    "analyze": "npm run size"
   },
   "devDependencies": {
-    "@size-limit/esbuild-why": "^12.0.0",
-    "@size-limit/preset-small-lib": "^12.0.0",
+    "@size-limit/file": "^12.0.0",
     "@types/fs-extra": "^11",
     "@types/jest": "^30.0.0",
     "@types/node": "^25.0.0",
