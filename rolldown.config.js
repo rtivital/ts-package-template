@@ -1,7 +1,7 @@
-import path from 'node:path';
 import { defineConfig } from 'rolldown';
 import { visualizer } from 'rollup-plugin-visualizer';
 import pkg from './package.json' with { type: 'json' };
+import path from 'node:path';
 
 const allowedDependencies = new Set([
   ...Object.keys(pkg.dependencies ?? {}),
