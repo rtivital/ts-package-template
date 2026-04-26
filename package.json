@@ -1,7 +1,7 @@
 {
   "name": "@rtivital/ts-package-template",
   "description": "A template for TypeScript packages",
-  "packageManager": "yarn@4.13.0",
+  "packageManager": "yarn@4.14.1",
   "version": "0.8.1",
   "type": "module",
   "types": "./dist/index.d.ts",
@@ -54,7 +54,7 @@
     "knip": "^6.0.0",
     "new-github-release-url": "^2.0.0",
     "open": "^11.0.0",
-    "oxfmt": "^0.44.0",
+    "oxfmt": "^0.46.0",
     "oxlint": "^1.58.0",
     "rimraf": "^6.0.1",
     "rolldown": "^1.0.0-rc.9",
