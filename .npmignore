@@ -14,7 +14,7 @@ oxlint.config.ts
 rolldown.config.js
 tsconfig.build.json
 tsconfig.json
-jest.config.js
+vitest.config.ts
 yarn.lock
 .github/*
 .nvmrc

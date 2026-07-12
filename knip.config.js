@@ -7,7 +7,6 @@ export default {
   // Entry points for the package
   entry: [
     'src/index.ts', // Main package entry
-    'rolldown.config.js', // Build configuration
     'scripts/**/*.ts', // Release and build scripts
   ],
 
@@ -20,10 +19,6 @@ export default {
 
   // Plugin configuration
   // Knip auto-detects these, but you can customize if needed
-  jest: {
-    config: 'jest.config.js',
-  },
-
   eslint: {
     config: 'eslint.config.js',
   },

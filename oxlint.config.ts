@@ -1,9 +1,8 @@
 import type { OxlintConfig } from 'oxlint';
 
 export default {
-  plugins: ['typescript', 'jest'],
+  plugins: ['typescript', 'vitest'],
   env: {
-    jest: true,
     node: true,
   },
   ignorePatterns: ['coverage/**', 'dist/**'],
