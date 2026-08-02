@@ -42,7 +42,7 @@
     "analyze": "npm run size"
   },
   "devDependencies": {
-    "@size-limit/file": "^12.0.0",
+    "@size-limit/file": "^13.0.0",
     "@types/fs-extra": "^11",
     "@types/node": "^26.0.0",
     "@types/signale": "^1",
