@@ -1008,7 +1008,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@rtivital/ts-package-template@workspace:."
   dependencies:
-    "@size-limit/file": "npm:^13.0.0"
+    "@size-limit/file": "npm:^14.0.0"
     "@types/fs-extra": "npm:^11"
     "@types/node": "npm:^26.0.0"
     "@types/signale": "npm:^1"
@@ -1053,12 +1053,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@size-limit/file@npm:^13.0.0":
-  version: 13.1.1
-  resolution: "@size-limit/file@npm:13.1.1"
+"@size-limit/file@npm:^14.0.0":
+  version: 14.0.0
+  resolution: "@size-limit/file@npm:14.0.0"
   peerDependencies:
-    size-limit: 13.1.1
-  checksum: 10c0/1b20b95b4a8a5e11f58df637e6c1a164b6924b3cc5f18ca5a8dea72734fc8e58e22c1dc2d35ec54f04c9d75fd8d9e988cd45b4ad23d02b2f0f2bd26525e62300
+    size-limit: 14.0.0
+  checksum: 10c0/d53b699d503af8d036a6bb70fd9fae5489ecf3e86050bc5eb291a0999a61a0ebb3bbd472f870987506211dc1ac7f6e26e297cf96211f811f59ee72327404df9a
   languageName: node
   linkType: hard
 
