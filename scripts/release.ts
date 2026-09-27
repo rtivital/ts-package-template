@@ -3,7 +3,7 @@ import fs from 'fs-extra';
 import githubRelease from 'new-github-release-url';
 import open from 'open';
 import signale from 'signale';
-import SimpleGit from 'simple-git';
+import { simpleGit } from 'simple-git';
 import { getNextVersion, VersionIncrement, VersionStage } from 'version-next';
 import yargs from 'yargs';
 import { hideBin } from 'yargs/helpers';
@@ -15,7 +15,7 @@ import path from 'node:path';
 const packageJsonPath = path.join(process.cwd(), 'package.json');
 const packageJson = fs.readJsonSync(packageJsonPath);
 const { argv } = yargs(hideBin(process.argv)) as any;
-const git = SimpleGit();
+const git = simpleGit();
 
 const versionIncrement: VersionIncrement = argv._[0] || 'patch';
 const versionStage: VersionStage | undefined = argv.stage;
